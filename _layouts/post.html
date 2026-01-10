@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+  <!-- Tags Section -->
+  {% if page.tags.size > 0 %}
+  <div class="post-tags" style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">
+    <strong>Tags:</strong>
+    {% for tag in page.tags %}
+      <span style="background: #f3f4f6; padding: 2px 8px; border-radius: 4px; margin-right: 5px;">#{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Next/Prev Navigation -->
+  <div class="post-navigation" style="display: flex; justify-content: space-between; margin-top: 30px;">
+    {% if page.previous.url %}
+      <a class="prev" href="{{ page.previous.url | relative_url }}" style="text-align: left; max-width: 45%;">
+        &laquo; {{ page.previous.title }}
+      </a>
+    {% else %}
+      <span></span> <!-- Spacer if no prev link -->
+    {% endif %}
+
+    {% if page.next.url %}
+      <a class="next" href="{{ page.next.url | relative_url }}" style="text-align: right; max-width: 45%;">
+        {{ page.next.title }} &raquo;
+      </a>
+    {% endif %}
+  </div>
+
+</article>
