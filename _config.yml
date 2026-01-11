@@ -14,8 +14,3 @@ output: true
 
 sass:
 style: compressed
-
-exclude:
-- Gemfile
-- Gemfile.lock
-- README.md
