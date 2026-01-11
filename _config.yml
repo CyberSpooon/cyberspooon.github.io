@@ -1,4 +1,4 @@
-title: Your Blog Title
+title: Cyberspooon's Blog
 description: Personal blog and technical writeups
 url: "https://cyberspooon.github.io"
 baseurl: ""
@@ -6,7 +6,7 @@ baseurl: ""
 markdown: kramdown
 theme: null
 
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:title/
 
 collections:
 posts:
