@@ -1,43 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="wrapper">
-            <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-            <nav class="site-nav">
-                <a href="{{ "/" | relative_url }}">Home</a>
-                <a href="{{ "/about" | relative_url }}">About</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">
-            {{ content }}
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="wrapper">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Powered by <a href="https://jekyllrb.com">Jekyll</a>.</p>
-            <div class="social-links">
-                {% if site.github_username %}
-                <a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
-                {% endif %}
-                {% if site.twitter_username %}
-                <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
-                {% endif %}
-            </div>
-        </div>
-    </footer>
-
+{% include header.html %}
+<main>
+{{ content }}
+</main>
+{% include footer.html %}
 </body>
 </html>

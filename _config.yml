@@ -1,16 +1,21 @@
-title: Test Title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cyberspooon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Your Blog Title
+description: Personal blog and technical writeups
+url: "https://cyberspooon.github.io"
+baseurl: ""
 
-# Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+theme: null
+
+permalink: /:categories/:year/:month/:day/:title/
+
+collections:
+posts:
+output: true
+
+sass:
+style: compressed
+
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
