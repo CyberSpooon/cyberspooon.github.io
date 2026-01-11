@@ -5,10 +5,6 @@ description: "Using knowledge about ClickFix phishing campaigns and hardware hac
 date: 2025-04-01
 image_base: /assets/images/posts/2025-04-01-Operation-Get-Ricked
 ---
-Operation: Get Ricked
-=====================
-Using knowledge about ClickFix phishing campaigns and hardware hacking to Rickroll my friends and family.
-
 
 Introduction
 ------------

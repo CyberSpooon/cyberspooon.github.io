@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "Wiz Cloud Security CTF — Challenge 1: Perimeter Leak"
+description: "In early June, Wiz launched a monthly [cloud security CTF](https://cloudsecuritychampionship.com) designed to give participants hands-on experience with real-world cloud security scenarios. I joined in and decided to document my journey along the way. This post is my write-up of the first challenge. Hope you enjoy!
+"
 date: 2025-08-07
 # image_base: /assets/images/posts/2025-04-01-Operation-Get-Ricked
 ---
-Wiz Cloud Security CTF — Challenge 1: Perimeter Leak
-====================================================
-
 ![captionless image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U9vd2_tf19EMGE9JSNrpTg.png)
-
-In early June, Wiz launched a monthly [cloud security CTF](https://cloudsecuritychampionship.com) designed to give participants hands-on experience with real-world cloud security scenarios. I joined in and decided to document my journey along the way. This post is my write-up of the first challenge. Hope you enjoy!
 
 Challenge 1: Perimeter Leak
 ---------------------------
