@@ -1,16 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>{{ page.title }} | {{ site.title }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/assets/css/style.css">
+  {% include head.html %}
 </head>
+
 <body>
-{% include header.html %}
-<main>
-{{ content }}
-</main>
-{% include footer.html %}
+  <div class="wrap">
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+  </div>
+
+  {% if page.enable_tag_filter %}
+    <script src="{{ '/assets/js/tag-filter.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>

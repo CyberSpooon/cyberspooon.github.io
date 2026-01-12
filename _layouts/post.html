@@ -2,18 +2,36 @@
 layout: default
 ---
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+<main class="postPage">
+  <div class="postShell">
+    <div class="postMetaRow">
+      <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
+
+      {% if page.tags and page.tags.size > 0 %}
+        <span class="tagline">
+          tag:
+          {{ page.tags[0] | downcase }}
+        </span>
+      {% endif %}
+    </div>
+
+    <h2 class="postHeading">{{ page.title }}</h2>
 
     {% if page.description %}
-      <p class="post-description">{{ page.description | markdownify }}</p>
+      <p class="postLead">{{ page.description }}</p>
     {% endif %}
 
-    <hr class="post-divider" />
-  </header>
+    <div class="postBody">
+      {{ content }}
+    </div>
 
-  <div class="post-content">
-    {{ content }}
+    {% if page.tags and page.tags.size > 0 %}
+      <div class="postTags">
+        <span class="postTagsLabel">tags:</span>
+        {% for t in page.tags %}
+          <span class="postTag">{{ t }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
-</article>
+</main>

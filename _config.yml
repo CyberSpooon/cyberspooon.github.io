@@ -1,6 +1,6 @@
-title: Cyberspooon's Blog
+title: Cyberspooon
 description: Personal blog and technical writeups
-url: "https://cyberspooon.github.io"
+url: ""
 baseurl: ""
 
 markdown: kramdown
@@ -14,3 +14,9 @@ output: true
 
 sass:
 style: compressed
+
+plugins:
+  - jekyll-feed
+
+# Optional: hide future-dated posts locally
+future: true

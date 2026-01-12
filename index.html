@@ -1,0 +1,54 @@
+---
+layout: default
+enable_tag_filter: true
+title: Blogs
+---
+
+<section class="grid">
+  <!-- POSTS -->
+  <main>
+    <div id="emptyState" class="empty">
+      No posts match the selected tags.
+    </div>
+
+    <div id="posts" class="posts">
+      {% for post in site.posts %}
+        {% assign tag_csv = post.tags | join: ', ' %}
+
+        <a class="post" href="{{ post.url | relative_url }}" data-tags="{{ tag_csv | escape }}">
+          <div class="postTop">
+            <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            {% if post.tags and post.tags.size > 0 %}
+              <div class="tagline">tag: {{ post.tags[0] | downcase }}</div>
+            {% else %}
+              <div class="tagline">tag: misc</div>
+            {% endif %}
+          </div>
+
+          <h2 class="postTitle">{{ post.title }}</h2>
+
+          {% if post.description %}
+            <p class="postDesc">{{ post.description }}</p>
+          {% else %}
+            <p class="postDesc">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </main>
+
+  <!-- TAG FILTER -->
+  <aside class="tagsCard" aria-label="Tag filters">
+    <div class="tagsHeader">
+      <h3>Tags</h3>
+      <span id="countMeta" class="tagsMeta">showing: 0 / 0</span>
+    </div>
+
+    <ul class="tagPills" id="tagPills"></ul>
+
+    <div class="tagsActions">
+      <button class="miniBtn" id="clearTags" type="button">Clear</button>
+      <button class="miniBtn" id="selectAll" type="button">Show All</button>
+    </div>
+  </aside>
+</section>

@@ -4,6 +4,7 @@ title: "Wiz Cloud Security CTF — Challenge 2: Contain Me If You Can"
 description: "After bit of a break, I finally completed my second write-up for [Wiz’s cloud security CTF](https://cloudsecuritychampionship.com). If you have not read my first post for this CTF, [check it out here](https://medium.com/@CyberSpooon/wiz-cloud-security-championship-ctf-challenge-1-perimeter-leak-33ca16f58b86)!"
 date: 2025-12-06
 # image_base: /assets/images/posts/2025-04-01-Operation-Get-Ricked
+tags: ["CTF", "Cloud", "Hacking"]
 ---
 ![captionless image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*FKsIBg7uHoJhKEHTZ9_v1A.png)
 

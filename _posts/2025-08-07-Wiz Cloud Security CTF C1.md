@@ -5,6 +5,7 @@ description: "In early June, Wiz launched a monthly [cloud security CTF](https:/
 "
 date: 2025-08-07
 # image_base: /assets/images/posts/2025-04-01-Operation-Get-Ricked
+tags: ["CTF", "Cloud", "Hacking"]
 ---
 ![captionless image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U9vd2_tf19EMGE9JSNrpTg.png)
 
