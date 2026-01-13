@@ -7,6 +7,8 @@
   const clearBtn = document.getElementById("clearTags");
   const allBtn = document.getElementById("selectAll");
   const searchInput = document.getElementById("searchInput");
+  const searchForm = document.getElementById("searchForm");
+
 
 let searchQuery = "";
 
@@ -91,3 +93,22 @@ if (searchInput) {
     applyFilter();
   });
 }
+
+if (searchForm && searchInput) {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    searchQuery = (searchInput.value || "").trim().toLowerCase();
+    applyFilter();
+    searchInput.blur();
+  });
+}
+
+
+searchInput.addEventListener("focus", () => {
+  searchWrap.classList.add("focused");
+});
+
+searchInput.addEventListener("blur", () => {
+  searchWrap.classList.remove("focused");
+});
+
