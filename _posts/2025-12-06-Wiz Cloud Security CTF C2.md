@@ -103,7 +103,7 @@ Edit: Fail compilation
 In order to perform the _exact_ `core_pattern` escape detailed in Jordy’s blog, I needed to install the necessary dependencies to build and compile C programs. My initial google-ing told me that the `build-base` alpine package contained all of the dependencies needed. While true, the package took up what little remaining disk space I had on the container. It wasn’t until after solving the CTF that I went back and realized I do not need the entire suite of build-base tools and instead only need `gcc` and `musl-dev` to compile binaries in C.
 
 ```bash
-032c93ff87db:~/data$ df _-h
+032c93ff87db:~/data$ df -h
 Fi_lesystem                Size      Used Available Use% Mounted on
 overlay                 973.4M    700.1M    206.1M  77% /
 tmpfs                    64.0M         0     64.0M   0% /dev

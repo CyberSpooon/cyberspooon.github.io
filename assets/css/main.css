@@ -199,6 +199,7 @@ a:hover{ color: var(--cyan); }
 
 /* Tags panel */
 .tagsCard{
+  text-transform: lowercase;
   border:1px solid var(--rule);
   border-radius:16px;
   background:var(--panel);
@@ -467,6 +468,9 @@ footer{
 .postBody img{
   display:block;
   max-width:100%;
+  
+  margin: 16px auto;
+
   height:auto;
   border-radius:14px;
   border: 1px solid rgba(180,195,230,.14);
