@@ -4,7 +4,7 @@ title: "Operation: Get Ricked"
 description: "Using knowledge about ClickFix phishing campaigns and hardware hacking to Rickroll my friends and family."
 date: 2025-04-01
 image_base: /assets/images/posts/2025-04-01-Operation-Get-Ricked
-tags: ["Meme"]
+tags: ["Meme", "Hacking", "Detection Engineering"]
 ---
 
 Introduction
@@ -24,7 +24,7 @@ Let the Games Begin!
 
 The easiest method for achieving my self-imposed goals would be with Windows scheduled tasks created via commandline. To start, I wrote this Rickroll PowerShell script, `GetRicked.ps1` that would be executed by a triggered scheduled task. The script downloads a Rickroll `.mp3` audio file from my [GitHub repository](https://github.com/CyberSpooon) to the current user’s temp directory. Once downloaded, it opens and plays the audio file with Windows Media Player (`wmplayer.exe`) hidden in the background. This script was saved to GitHub for later use.
 
-```
+```bash
 Set-ExecutionPolicy -Scope CurrentUser Bypass
 $audio = "https://github.com/CyberSpooon/GetRicked/raw/refs/heads/main/Get_Ricked.mp3"
 $path = "$env:TEMP\Get_Ricked.mp3"
@@ -35,7 +35,7 @@ Start-Process "wmplayer.exe" -ArgumentList "$path" -WindowStyle Hidden ## open .
 
 Next, I wrote a second PowerShell script, `scheduletherickoning.ps1` that would create a scheduled task on the target machine and run the first script, `GetRicked.ps1` at 10:30 AM, April Fools’ Day. This script was also uploaded to GitHub.
 
-```
+```bash
 Set-ExecutionPolicy -Scope CurrentUser Bypass
 $runtime = Get-Date "2025-04-01 10:30"
 $taskname = "GetRicked"
@@ -51,7 +51,7 @@ I re-flashed the microcontroller with the code below programming it to do the fo
 1.  Open a run window with the Windows + R shortcut
 2.  Paste and run the previously described `scheduletherickoning.ps1` scheduled task script from GitHub.
 
-```
+```bash
 #include <Keyboard.h>
 void setup() {
   delay(3000);
@@ -106,7 +106,7 @@ To detect possible ClickFix phishing attempts (or would-be Rickrollers) in your 
 
 Searching for PowerShell badness like `iex`, `iwr`, `https`, and `invoke`, etc within this key can give us a high fidelity, low false positive detection rule. To aid in the detection of this malicious behavior, I wrote a Sigma rule to find this exact kind of activity.
 
-```
+```bash
 title: Possible ClickFix Phishing Attempt
 id: 9decb4bd-62de-453c-8e06-ddb4f63977c8
 status: test

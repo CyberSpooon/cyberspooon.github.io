@@ -35,7 +35,7 @@ In this case, it wasn’t much help since I had already discovered the `/mapping
 
 This is much more useful information as I had overlooked the `/proxy` endpoint in my initial review of `/mappings` which also shows it accepts URL parameters.
 
-```
+```bash
 {
     "predicate": "{ [/proxy], params [url]}",
     "handler": "challenge.Application#proxy(String)",
@@ -76,7 +76,7 @@ You Can’t S3 Me
 
 Figuring out how to use these credentials to get access to the S3 bucket containing the flag would be my next challenge. This [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html) describes how we can utilize the newly acquired credentials by setting them as environment variables.
 
-```
+```bash
 export AWS_ACCESS_KEY_ID=*
 export AWS_SECRET_ACCESS_KEY=*
 export AWS_SESSION_TOKEN=*
@@ -88,7 +88,7 @@ However, despite having these credentials, I do not know the name of the S3 buck
 
 Back to the drawing board, I start digging through the exposed `/actuator/env` endpoint again. This comes in clutch as it contains a systemEnviroment property called “BUCKET”.
 
-```
+```bash
 {
     "name": "systemEnvironment",
     "properties": {

