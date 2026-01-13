@@ -4,6 +4,7 @@ url: ""
 baseurl: ""
 
 markdown: kramdown
+highlighter: rouge
 theme: null
 
 permalink: /:categories/:title/
