@@ -14,9 +14,7 @@ permalink: /about/
       <p>
         https://x.com/CyberSpooon | https://github.com/CyberSpooon
       </p>
-    <p class="postLead">
-      Certs
-    </p>
+      <h3 class="postHeading">Certs</h3>
       <p>
         GIAC GCFR (Certified Cloud Forensic Responder) | CompTIA Security+ | CompTIA A+
       </p>
