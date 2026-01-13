@@ -7,17 +7,18 @@ permalink: /about/
 <main class="postPage">
   <div class="postShell">
     <h2 class="postHeading">About</h2>
-    <p class="postLead">
-      SOC / DFIR builder with a bias for clean detections.
-    </p>
-
     <div class="postBody">
       <p>
-        I write practical notes on incidents, cloud forensics, detection engineering, and CTF debriefs.
-        High signal, low fluff — built to stay fast on GitHub Pages.
+        Incident responder who dabbles in hacking whenever possible. Motivated to understand how threat actors operate so I can catch them easier (:
       </p>
       <p>
-        Add links here: GitHub / LinkedIn / Email.
+        https://x.com/CyberSpooon | https://github.com/CyberSpooon
+      </p>
+    <p class="postLead">
+      Certs
+    </p>
+      <p>
+        GIAC GCFR (Certified Cloud Forensic Responder) | CompTIA Security+ | CompTIA A+
       </p>
     </div>
   </div>
