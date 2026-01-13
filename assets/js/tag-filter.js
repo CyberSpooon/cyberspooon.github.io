@@ -6,6 +6,10 @@
   const countMeta = document.getElementById("countMeta");
   const clearBtn = document.getElementById("clearTags");
   const allBtn = document.getElementById("selectAll");
+  const searchInput = document.getElementById("searchInput");
+
+let searchQuery = "";
+
 
   if (!posts.length || !tagPills || !countMeta) return;
 
@@ -80,3 +84,10 @@
 
   applyFilter();
 })();
+
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = (e.target.value || "").trim().toLowerCase();
+    applyFilter();
+  });
+}

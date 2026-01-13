@@ -15,7 +15,12 @@ title: Blogs
       {% for post in site.posts %}
         {% assign tag_csv = post.tags | join: ', ' %}
 
-        <a class="post" href="{{ post.url | relative_url }}" data-tags="{{ tag_csv | escape }}">
+        <a class="post"
+           href="{{ post.url | relative_url }}"
+           data-tags="{{ tag_csv | escape }}"
+           data-title="{{ post.title | escape }}"
+           data-desc="{% if post.description %}{{ post.description | escape }}{% else %}{{ post.excerpt | strip_html | truncate: 180 | escape }}{% endif %}">
+
           <div class="postTop">
             <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
             {% if post.tags and post.tags.size > 0 %}

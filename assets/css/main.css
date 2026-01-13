@@ -368,3 +368,38 @@ footer{
   .title{ font-size:38px; }
   .search{ width:100%; min-width:unset; }
 }
+
+.searchWrap{
+  margin-top:46px;
+  border:1px solid var(--rule);
+  border-radius:14px;
+  padding:12px 14px;
+  min-width:240px;
+  background:var(--panel2);
+  color:rgba(234,241,255,.88);
+  white-space:nowrap;
+  user-select:none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.searchWrap .slash{
+  color:var(--cyan);
+}
+
+.searchInput{
+  width: 210px;
+  max-width: 60vw;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:rgba(234,241,255,.90);
+  font-family: var(--console);
+  font-size:13px;
+  padding:0;
+}
+
+.searchInput::placeholder{
+  color: rgba(154,166,191,.70);
+}
