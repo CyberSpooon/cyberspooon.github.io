@@ -6,11 +6,12 @@ layout: default
   <div class="postShell">
     <div class="postMetaRow">
       <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
-
       {% if page.tags and page.tags.size > 0 %}
         <span class="tagline">
-          tag:
-          {{ page.tags[0] | downcase }}
+          Tags:
+          {% for t in page.tags %}
+            {{ t | downcase }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
         </span>
       {% endif %}
     </div>
@@ -27,7 +28,7 @@ layout: default
 
     {% if page.tags and page.tags.size > 0 %}
       <div class="postTags">
-        <span class="postTagsLabel">tags:</span>
+        <span class="postTagsLabel">Tags:</span>
         {% for t in page.tags %}
           <span class="postTag">{{ t }}</span>
         {% endfor %}
