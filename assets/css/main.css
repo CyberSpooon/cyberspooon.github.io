@@ -403,3 +403,24 @@ footer{
 .searchInput::placeholder{
   color: rgba(154,166,191,.70);
 }
+
+/* --- Post content: images behave --- */
+.postBody img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  border-radius:14px;
+  border: 1px solid rgba(180,195,230,.14);
+  background: rgba(255,255,255,.02);
+}
+
+/* If an image is inside a link, treat it like a clickable preview */
+.postBody a img{
+  cursor: zoom-in;
+  transition: transform .12s ease, border-color .12s ease;
+}
+
+.postBody a:hover img{
+  transform: translateY(-1px);
+  border-color: rgba(103,232,255,.28);
+}
