@@ -370,6 +370,33 @@ footer{
   padding: 2px 6px;
   font-size: 12px;
 }
+
+/* ============================= */
+/* Rouge syntax colors */
+/* ============================= */
+.highlight .k{ color:#FF7AB2; }        /* keywords */
+.highlight .kd{ color:#FF7AB2; }
+.highlight .kn{ color:#FF7AB2; }
+
+.highlight .s{ color:#9ECE6A; }        /* strings */
+.highlight .s1{ color:#9ECE6A; }
+.highlight .s2{ color:#9ECE6A; }
+
+.highlight .c{ color:#7AA2F7; opacity:.7; } /* comments */
+.highlight .c1{ color:#7AA2F7; opacity:.7; }
+
+.highlight .n{ color:#EAF1FF; }        /* names */
+.highlight .nf{ color:#7DCFFF; }       /* functions */
+
+.highlight .o{ color:#FF9E64; }        /* operators */
+.highlight .p{ color:#A9B1D6; }        /* punctuation */
+
+.highlight .mi{ color:#FF9E64; }       /* numbers */
+.highlight .mh{ color:#FF9E64; }
+
+.highlight .nb{ color:#7DCFFF; }       /* built-ins */
+.highlight .bp{ color:#7DCFFF; }
+
 .postTags{
   margin-top:18px;
   padding-top:14px;

