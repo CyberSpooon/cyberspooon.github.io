@@ -214,6 +214,7 @@ a:hover{ color: var(--cyan); }
 .tagsHeader{
   display:flex;
   justify-content:space-between;
+  text-transform: capitalize;
   margin-bottom:12px;
   font-size:14px;
   gap:12px;
@@ -427,7 +428,16 @@ footer{
 @media (max-width:760px){
   .title{ font-size:38px; }
   .search{ width:100%; min-width:unset; }
+
+  .post,
+  .postShell,
+  .tagsCard{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
+
 
 .searchWrap{
   margin-top:46px;
@@ -468,7 +478,7 @@ footer{
 .postBody img{
   display:block;
   max-width:100%;
-  
+
   margin: 16px auto;
 
   height:auto;
